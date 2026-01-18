@@ -1,7 +1,7 @@
 import requests
 import time
 
-API_KEY = "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"
+API_KEY = "you_API_key"
 
 url = "https://api.brevo.com/v3/smtp/email"
 
@@ -38,5 +38,6 @@ for email in recipients:
     response = requests.post(url, json=data, headers=headers)
 
     print(f"Sent to {email} | Status: {response.status_code} | Response: {response.json()}")
+
 
     time.sleep(1)
